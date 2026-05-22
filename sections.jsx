@@ -24,7 +24,7 @@ function Nav({ onConsult, onMenu, menuOpen }) {
           <div className="brand-mark" />
           <div className="brand-text">
             <div className="brand-name">Chaudhary &amp; Associates</div>
-            <div className="brand-tag">Attorneys at Law · Est. 2025</div>
+            <div className="brand-tag">Attorneys at Law · Est. 2022</div>
           </div>
         </a>
         <div className="nav-links">
@@ -68,7 +68,7 @@ function Hero({ heroVariant }) {
       <div className="hero-watermark" />
       <div className="shell hero-grid">
         <div className="hero-meta">
-          <span><i className="dot" /> Est. 2025</span>
+          <span><i className="dot" /> Est. 2022</span>
           <span><i className="dot" /> Delhi High Court</span>
           <span><i className="dot" /> Banking · NBFC · Cyber</span>
         </div>
@@ -120,7 +120,7 @@ function About({ creamBand }) {
         <div className="about-grid">
           <div className="reveal">
             <p className="body-lg">
-              Founded in 2025 in Lawyer's Block III at the Delhi High Court, Chaudhary &amp; Associates was built around a focused thesis — that the next decade of Indian litigation will be defined by the intersection of finance, technology and fraud.
+              Founded in 2022 in Lawyer's Block III at the Delhi High Court, Chaudhary &amp; Associates was built around a focused thesis — that the next decade of Indian litigation will be defined by the intersection of finance, technology and fraud.
             </p>
             <p className="body-lg" style={{ marginTop: 18 }}>
               We act for banks and non-banking financial companies on the strategic edge of recovery and compliance, and for individuals and enterprises navigating the aftermath of cyber crime. Our practice is small by design: every matter is partner-led, every brief is read.
@@ -128,7 +128,7 @@ function About({ creamBand }) {
           </div>
           <div className="reveal delay-2">
             <div className="about-stats">
-              <div className="stat"><div className="num">2025<span className="plus"></span></div><div className="lbl">Year Founded</div></div>
+              <div className="stat"><div className="num">2022<span className="plus"></span></div><div className="lbl">Year Founded</div></div>
               <div className="stat"><div className="num">10<span className="plus">+</span></div><div className="lbl">Years at the Bar</div></div>
               <div className="stat"><div className="num">06</div><div className="lbl">Practice Areas</div></div>
               <div className="stat"><div className="num">100<span className="plus">%</span></div><div className="lbl">Partner-led Matters</div></div>
@@ -437,7 +437,7 @@ function Footer() {
               <div className="brand-mark" />
               <div className="brand-text">
                 <div className="brand-name">Chaudhary &amp; Associates</div>
-                <div className="brand-tag">Attorneys at Law · Est. 2025</div>
+                <div className="brand-tag">Attorneys at Law · Est. 2022</div>
               </div>
             </div>
             <p className="body" style={{ color: "var(--fg-mute)", maxWidth: 360, fontSize: 14 }}>
@@ -469,7 +469,7 @@ function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <div>© 2025 — 2026 Chaudhary &amp; Associates</div>
+          <div>© 2025 Chaudhary &amp; Associates. All rights reserved.</div>
           <div className="disclaimer">
             As per Bar Council of India rules, advocates are not permitted to solicit work or advertise. By accessing this site, the visitor acknowledges that the content is for informational purposes only and does not constitute legal advice or an advocate-client relationship.
           </div>
