@@ -486,19 +486,16 @@ function DisclaimerModal({ open, onAgree }) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
   return (
-    <div className={`modal-bg ${open ? "open" : ""}`}>
-      <div className="modal disclaimer-modal" onClick={(e) => e.stopPropagation()}>
-        <div className="disclaimer-modal-header">
-          <h3>Disclaimer</h3>
-          <button className="modal-close" onClick={onAgree} aria-label="Close"><Icon name="close" size={14} /></button>
-        </div>
-        <div className="disclaimer-modal-divider" />
-        <div className="disclaimer-modal-body">
-          <p>
-            The regulations set forth by the Bar Council of India explicitly prohibit lawyers and law firms from engaging in advertising or solicitation through public communication channels. This website strictly refrains from serving as a platform for such promotional activities. Chaudhary &amp; Associates affirms that it harbors no intention to advertise or solicit clients via this website. By clicking 'I AGREE,' you acknowledge that the content on this website does not constitute advertising or solicitation and is intended solely for informational purposes.
+    <div className={`disclaimer-overlay ${open ? "open" : ""}`}>
+      <div className="disclaimer-box">
+        <div className="disclaimer-box-rule" />
+        <div className="disclaimer-box-inner">
+          <div className="disclaimer-eyebrow">Notice</div>
+          <h2 className="disclaimer-title">Disclaimer</h2>
+          <div className="disclaimer-gold-rule" />
+          <p className="disclaimer-text">
+            The regulations set forth by the Bar Council of India explicitly prohibit lawyers and law firms from engaging in advertising or solicitation through public communication channels. This website strictly refrains from serving as a platform for such promotional activities. Chaudhary &amp; Associates affirms that it harbors no intention to advertise or solicit clients via this website. By clicking <em>'I Agree,'</em> you acknowledge that the content on this website does not constitute advertising or solicitation and is intended solely for informational purposes.
           </p>
-        </div>
-        <div className="disclaimer-modal-footer">
           <button className="disclaimer-agree-btn" onClick={onAgree}>I Agree</button>
         </div>
       </div>

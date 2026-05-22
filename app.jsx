@@ -24,9 +24,7 @@ function App() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [openAttorney, setOpenAttorney] = React.useState(null);
-  const [disclaimerOpen, setDisclaimerOpen] = React.useState(
-    () => !localStorage.getItem("disclaimer_agreed")
-  );
+  const [disclaimerOpen, setDisclaimerOpen] = React.useState(true);
 
   useReveal();
 
@@ -36,7 +34,6 @@ function App() {
 
   const closeAttorney = React.useCallback(() => setOpenAttorney(null), []);
   const agreeDisclaimer = React.useCallback(() => {
-    localStorage.setItem("disclaimer_agreed", "1");
     setDisclaimerOpen(false);
   }, []);
 
