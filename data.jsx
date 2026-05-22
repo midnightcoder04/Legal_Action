@@ -95,6 +95,19 @@ const CLIENTELE = [
   },
 ];
 
+const GALLERY = [
+  { src: "assets/gallery-01.jpg", caption: "Delhi High Court — Main Entrance", span: "wide" },
+  { src: "assets/gallery-02.jpg", caption: "Chambers — Block III" },
+  { src: "assets/gallery-03.jpg", caption: "Consultation Room" },
+  { src: "assets/gallery-04.jpg", caption: "Library & Research Wing" },
+  { src: "assets/gallery-05.jpg", caption: "Courtroom — DRT New Delhi", span: "wide" },
+  { src: "assets/gallery-06.jpg", caption: "Partner Meeting" },
+  { src: "assets/gallery-07.jpg", caption: "Case Review Session" },
+  { src: "assets/gallery-08.jpg", caption: "Firm Signage — Ch No. 605" },
+  { src: "assets/gallery-09.jpg", caption: "Client Briefing Room" },
+];
+
 window.PRACTICE_AREAS = PRACTICE_AREAS;
 window.ATTORNEYS = ATTORNEYS;
 window.CLIENTELE = CLIENTELE;
+window.GALLERY = GALLERY;

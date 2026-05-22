@@ -52,6 +52,7 @@ function App() {
       <Practice layout={tweaks.practiceLayout} />
       <Clientele />
       <Attorneys onOpen={setOpenAttorney} />
+      <Gallery />
       <Contact />
       <Footer />
 

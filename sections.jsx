@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { id: "practice", label: "Practice" },
   { id: "clientele", label: "Clientele" },
   { id: "people", label: "People" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -382,12 +383,85 @@ function ContactForm() {
   );
 }
 
+function Gallery() {
+  const [active, setActive] = React.useState(null);
+
+  React.useEffect(() => {
+    if (active !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [active]);
+
+  const prev = () => setActive((active - 1 + GALLERY.length) % GALLERY.length);
+  const next = () => setActive((active + 1) % GALLERY.length);
+
+  React.useEffect(() => {
+    if (active === null) return;
+    const onKey = (e) => {
+      if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "Escape") setActive(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [active]);
+
+  return (
+    <section id="gallery" className="section darker">
+      <div className="shell">
+        <div className="section-head reveal">
+          <div className="label"><span className="eyebrow">Gallery · 05</span></div>
+          <div>
+            <h2 className="display">Inside the <span className="it">chambers.</span></h2>
+          </div>
+        </div>
+        <div className="gallery-grid">
+          {GALLERY.map((item, i) => (
+            <button
+              key={i}
+              className={`gallery-item reveal${item.span ? " " + item.span : ""}`}
+              onClick={() => setActive(i)}
+              aria-label={item.caption}
+            >
+              <div className="gallery-img-wrap">
+                <img src={item.src} alt={item.caption} loading="lazy" />
+                <div className="gallery-placeholder">
+                  <Icon name="image" size={28} />
+                  <span>Photo coming soon</span>
+                </div>
+              </div>
+              <div className="gallery-caption">{item.caption}</div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {active !== null && (
+        <div className="gallery-lightbox" onClick={() => setActive(null)}>
+          <button className="gallery-lb-close" onClick={() => setActive(null)} aria-label="Close">
+            <Icon name="close" size={16} />
+          </button>
+          <button className="gallery-lb-nav prev" onClick={(e) => { e.stopPropagation(); prev(); }} aria-label="Previous">&#8249;</button>
+          <div className="gallery-lb-stage" onClick={(e) => e.stopPropagation()}>
+            <img src={GALLERY[active].src} alt={GALLERY[active].caption} />
+            <div className="gallery-lb-caption">{GALLERY[active].caption}</div>
+          </div>
+          <button className="gallery-lb-nav next" onClick={(e) => { e.stopPropagation(); next(); }} aria-label="Next">&#8250;</button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section id="contact" className="section darker">
       <div className="shell">
         <div className="section-head reveal">
-          <div className="label"><span className="eyebrow">Contact · 05</span></div>
+          <div className="label"><span className="eyebrow">Contact · 06</span></div>
           <div>
             <h2 className="display">Visit the chambers.</h2>
           </div>
@@ -512,6 +586,7 @@ window.Practice = Practice;
 window.Clientele = Clientele;
 window.Attorneys = Attorneys;
 window.AttorneyModal = AttorneyModal;
+window.Gallery = Gallery;
 window.Contact = Contact;
 window.Footer = Footer;
 window.DisclaimerModal = DisclaimerModal;
