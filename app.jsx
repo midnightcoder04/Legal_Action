@@ -2,7 +2,7 @@
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroVariant": "counsel",
-  "practiceLayout": "accordion",
+  "practiceLayout": "cards",
   "creamBand": false,
   "goldHue": 80,
   "navyHue": 220
@@ -76,6 +76,7 @@ function App() {
           label="Layout"
           value={tweaks.practiceLayout}
           options={[
+            { value: "cards", label: "Cards" },
             { value: "accordion", label: "Accordion" },
             { value: "grid", label: "Grid" },
           ]}

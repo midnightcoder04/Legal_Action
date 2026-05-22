@@ -183,6 +183,31 @@ function PracticeGrid() {
   );
 }
 
+function PracticeCards() {
+  return (
+    <div className="practice-cards">
+      {PRACTICE_AREAS.map((p, i) => (
+        <div key={p.num} className={`pcard reveal delay-${(i % 3) + 1}`}>
+          <div className="pcard-img">
+            <img src={p.img} alt={p.name} loading="lazy" onLoad={(e) => e.target.classList.add("loaded")} />
+            <div className="pcard-img-placeholder">
+              <Icon name={p.icon} size={40} stroke={1.1} />
+            </div>
+          </div>
+          <div className="pcard-body">
+            <div className="pcard-num">{p.num}</div>
+            <div className="pcard-name">{p.name}</div>
+            <p className="pcard-desc">{p.desc}</p>
+            <div className="pcard-tags">
+              {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Practice({ layout }) {
   return (
     <section id="practice" className="section dark">
@@ -194,7 +219,7 @@ function Practice({ layout }) {
           </div>
         </div>
         <div className="reveal">
-          {layout === "grid" ? <PracticeGrid /> : <PracticeAccordion />}
+          {layout === "grid" ? <PracticeGrid /> : layout === "cards" ? <PracticeCards /> : <PracticeAccordion />}
         </div>
       </div>
     </section>

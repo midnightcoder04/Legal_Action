@@ -29,6 +29,14 @@ const Icon = ({ name, size = 18, stroke = 1.5 }) => {
       return <svg viewBox="0 0 24 24" {...s}><path d="M12 3v18M5 21h14M6 7l-3 7h6l-3-7zM18 7l-3 7h6l-3-7z" /></svg>;
     case "image":
       return <svg viewBox="0 0 24 24" {...s}><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>;
+    case "gavel":
+      return <svg viewBox="0 0 24 24" {...s}><path d="M14 2l8 8-3 3-8-8 3-3zM3 21l9-9M9 3l3 3M12 12l3 3"/></svg>;
+    case "cyber":
+      return <svg viewBox="0 0 24 24" {...s}><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 8l2 2 4-4"/></svg>;
+    case "building":
+      return <svg viewBox="0 0 24 24" {...s}><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></svg>;
+    case "handshake":
+      return <svg viewBox="0 0 24 24" {...s}><path d="M20.5 14.5l-5.5 5.5-3-3 5-5 3.5 2.5zM3.5 14.5L9 20l3-3-5-5L3.5 14.5z"/><path d="M9 5l3 3 3-3 4 4-7 7-7-7 4-4z"/></svg>;
     default:
       return null;
   }
