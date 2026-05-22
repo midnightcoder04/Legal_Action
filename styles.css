@@ -882,7 +882,9 @@ h3.display { font-size: clamp(24px, 2.6vw, 34px); }
 .disclaimer-overlay {
   position: fixed; inset: 0;
   z-index: 200;
-  background: var(--bg-0);
+  background: oklch(10% 0.02 250 / 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex; align-items: center; justify-content: center;
   padding: 24px;
   opacity: 0;
