@@ -29,6 +29,8 @@ const Icon = ({ name, size = 18, stroke = 1.5 }) => {
       return <svg viewBox="0 0 24 24" {...s}><path d="M12 3v18M5 21h14M6 7l-3 7h6l-3-7zM18 7l-3 7h6l-3-7z" /></svg>;
     case "image":
       return <svg viewBox="0 0 24 24" {...s}><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>;
+    case "document":
+      return <svg viewBox="0 0 24 24" {...s}><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>;
     case "gavel":
       return <svg viewBox="0 0 24 24" {...s}><path d="M14 2l8 8-3 3-8-8 3-3zM3 21l9-9M9 3l3 3M12 12l3 3"/></svg>;
     case "cyber":

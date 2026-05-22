@@ -215,7 +215,7 @@ function Practice({ layout }) {
         <div className="section-head reveal">
           <div className="label"><span className="eyebrow">Practice · 02</span></div>
           <div>
-            <h2 className="display">Six disciplines. <span className="it">One standard.</span></h2>
+            <h2 className="display">What we <span className="it">handle.</span></h2>
           </div>
         </div>
         <div className="reveal">
